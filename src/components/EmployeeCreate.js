@@ -28,7 +28,7 @@ class EmployeeCreate extends Component {
         <Text style={styles.pickerTextStyle}>Shift</Text>
           <Picker
             style={{ flex: 1 }}
-            selectedValue={this.props.shift[0]}
+            selectedValue={this.props.shift}
             onValueChange={value => this.props.employeeUpdate({ prop: 'shift', value })}
           >
             <Picker.Item label="Monday" value="Monday" />
@@ -55,7 +55,7 @@ const styles = {
     fontSize: 18,
     paddingLeft: 20
   }
-}
+};
 
 const mapStateToProps = (state) => {
   const { name, phone, shift } = state.employeeForm;
